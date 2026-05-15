@@ -1,0 +1,26 @@
+// ── Colours ────────────────────────────────────────────
+$bg:            #060610;
+$panel-bg:      rgba(0, 0, 0, 0.72);
+$panel-border:  #334466;
+
+$cyan:    #22d3ee;
+$red:     #ff4d6d;
+$yellow:  #facc15;
+$green:   #4ade80;
+$purple:  #c084fc;
+$muted:   #6080a0;
+$dimmer:  #4a5568;
+$dark:    #1a2233;
+
+$feedback-perfect: $yellow;
+$feedback-great:   $green;
+$feedback-good:    $cyan;
+$feedback-miss:    $red;
+
+// ── Typography ─────────────────────────────────────────
+$font-mono: 'Courier New', monospace;
+
+// ── Layout ─────────────────────────────────────────────
+$radius-sm:  8px;
+$radius-md:  10px;
+$radius-full: 50%;

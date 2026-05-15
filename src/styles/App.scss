@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: $bg;
+
+  &_canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

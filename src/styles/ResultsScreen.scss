@@ -1,0 +1,85 @@
+@use 'variables' as *;
+
+.results {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 6, 16, 0.92);
+
+  &_eyebrow {
+    font-size: 11px;
+    color: $yellow;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &_title {
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 30px rgba($yellow, 0.4);
+  }
+
+  &_rating {
+    font-size: 72px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    line-height: 1;
+  }
+
+  &_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+
+  &_replay-btn {
+    padding: 14px 52px;
+    font-size: 18px;
+    font-weight: 700;
+    background: $yellow;
+    color: $bg;
+    border: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-family: $font-mono;
+    text-transform: uppercase;
+    box-shadow: 0 0 32px rgba($yellow, 0.33);
+    transition: transform 0.1s;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+}
+
+// ── Stat card ──────────────────────────────────────────
+.stat-card {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid $panel-border;
+  border-radius: $radius-md;
+  padding: 16px 24px;
+  min-width: 130px;
+  text-align: center;
+
+  &_label {
+    font-size: 10px;
+    color: $muted;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  &_value {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}

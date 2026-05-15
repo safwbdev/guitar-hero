@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bg;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: $font-mono;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}

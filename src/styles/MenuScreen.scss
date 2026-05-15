@@ -1,0 +1,99 @@
+@use 'variables' as *;
+
+.menu {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 6, 16, 0.92);
+
+  &_eyebrow {
+    font-size: 11px;
+    color: $cyan;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &_title {
+    font-size: clamp(30px, 7vw, 54px);
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow:
+      0 0 40px rgba($cyan, 0.6),
+      0 0 80px rgba($cyan, 0.27);
+    margin-bottom: 8px;
+  }
+
+  &_tagline {
+    color: $muted;
+    font-size: 14px;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  &_keys {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  &_key {
+    width: 42px;
+    height: 42px;
+    border-radius: $radius-full;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  &_scoring {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 36px;
+    font-size: 12px;
+  }
+
+  &_score-item {
+    text-align: center;
+
+    &-label {
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    &-pts {
+      color: $dimmer;
+      font-size: 11px;
+    }
+  }
+
+  &_play-btn {
+    padding: 14px 56px;
+    font-size: 18px;
+    font-weight: 700;
+    background: $cyan;
+    color: $bg;
+    border: none;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-family: $font-mono;
+    text-transform: uppercase;
+    box-shadow: 0 0 32px rgba($cyan, 0.33), 0 0 60px rgba($cyan, 0.13);
+    transition: transform 0.1s, box-shadow 0.1s;
+
+    &:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 40px rgba($cyan, 0.47);
+    }
+  }
+}

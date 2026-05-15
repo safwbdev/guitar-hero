@@ -1,0 +1,159 @@
+@use 'variables' as *;
+
+// ── Shared panel ───────────────────────────────────────
+.panel {
+  position: absolute;
+  background: $panel-bg;
+  border: 1px solid $panel-border;
+  border-radius: $radius-sm;
+  padding: 10px 18px;
+
+  &_label {
+    font-size: 10px;
+    color: $muted;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &_value {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: $font-mono;
+  }
+}
+
+// ── Score ──────────────────────────────────────────────
+.score-panel {
+  top: 16px;
+  left: 16px;
+
+  &_value {
+    color: $cyan;
+  }
+}
+
+// ── Combo ──────────────────────────────────────────────
+.combo-panel {
+  top: 16px;
+  right: 16px;
+  text-align: right;
+
+  &_value {
+    transition: color 0.3s;
+
+    &--low {
+      color: #ffffff;
+    }
+
+    &--mid {
+      color: $green;
+    }
+
+    &--high {
+      color: $yellow;
+    }
+  }
+}
+
+// ── Misses ─────────────────────────────────────────────
+.misses-panel {
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  color: $red;
+  font-size: 13px;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+// ── Feedback text ──────────────────────────────────────
+.feedback {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+
+  &--perfect {
+    color: $feedback-perfect;
+    text-shadow: 0 0 24px $feedback-perfect;
+  }
+
+  &--great {
+    color: $feedback-great;
+    text-shadow: 0 0 24px $feedback-great;
+  }
+
+  &--good {
+    color: $feedback-good;
+    text-shadow: 0 0 24px $feedback-good;
+  }
+
+  &--miss {
+    color: $feedback-miss;
+    text-shadow: 0 0 24px $feedback-miss;
+  }
+
+  &--visible {
+    opacity: 1;
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+// ── Streak pips ────────────────────────────────────────
+.streak {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+
+  &_pip {
+    width: 10px;
+    height: 10px;
+    border-radius: $radius-full;
+    background: $dark;
+    transition: background 0.15s, box-shadow 0.15s;
+
+    &--lit {
+      background: $yellow;
+      box-shadow: 0 0 6px $yellow;
+    }
+  }
+}
+
+// ── Key buttons (mobile) ───────────────────────────────
+.lane-buttons {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.lane-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-full;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: $font-mono;
+  border-width: 2px;
+  border-style: solid;
+  background: transparent;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
